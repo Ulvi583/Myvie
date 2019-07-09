@@ -1,2 +1,2 @@
 # Myvie
-Myvie Application that used Rxjava and Retrofit
+Myvie Application with Rxjava and Retrofit
