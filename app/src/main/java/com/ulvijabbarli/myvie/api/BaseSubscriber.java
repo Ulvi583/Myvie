@@ -18,7 +18,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Response;
 
 
-public abstract class BaseSubscriber<R extends Object> implements Subscriber<R>, Observer<R> {
+public abstract class BaseSubscriber <R extends Object> implements Subscriber<R>, Observer<R> {
 
 
     private BaseView view;

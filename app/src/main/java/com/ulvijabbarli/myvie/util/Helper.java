@@ -16,7 +16,6 @@ import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.os.ResultReceiver;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.Formatter;
@@ -226,7 +225,7 @@ public class Helper {
                 .into(target);
     }
 
-    public static void showKeyboard(@NonNull Activity activity) {
+    public static void showKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
         // the public methods don't seem to work for me, so… reflection.
         try {
@@ -238,7 +237,7 @@ public class Helper {
         }
     }
 
-    public static void hideKeyboard(@NonNull Activity activity) {
+    public static void hideKeyboard(Activity activity) {
 //        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
 //        //Find the currently focused view, so we can grab the correct window token from it.
 //        View view = activity.getCurrentFocus();
@@ -299,7 +298,6 @@ public class Helper {
         return Math.round((float) dp * density);
     }
 
-    @NonNull
     public static MultipartBody.Part prepareFilePart(String partName, File file) {
         RequestBody requestFile =
                 RequestBody.create(

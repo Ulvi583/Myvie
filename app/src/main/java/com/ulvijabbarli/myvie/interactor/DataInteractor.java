@@ -22,7 +22,7 @@ public class DataInteractor extends BaseInteractor {
         apiInitHelper
                 .getService()
                 .getMovies(Constants.API_KEY_FOR_MOVIES)
-                .compose(this.<MovieResponse>baseCall())
+                .compose(this.baseCall())
                 .subscribe(movieObserver);
     }
 
@@ -30,7 +30,7 @@ public class DataInteractor extends BaseInteractor {
         apiInitHelper
                 .getService()
                 .getMoviesBasedOnQuery(Constants.API_KEY_FOR_MOVIES, query)
-                .compose(this.<MovieResponse>baseCall())
+                .compose(this.baseCall())
                 .subscribe(observer);
     }
 
